@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index2.css' %}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Event Booking</h1>
+            </div>
+            <i id="bar" class="fa-solid fa-bars"></i>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#doctor">Engagement</a></li>
+                <li><a href="#speciality">Marriage</a></li>
+                <li><a href="#patient">Birthday</a></li>
+                <li><a href="#contact">Contact us</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="main">
+            <div class="mainText">
+                <h1>Event Booking System <br>
+                   Creating unforgettable memories,one event at a time</h1>
+                <h3>Making your dream reality</h3>
+                <button style="text-align: center;">Show more</button>
+            </div>
+            <img src="static/images/background.jpeg" alt="">
+        </div>
+
+        <div id="doctor">
+            <div class="head">
+                <h1>Engagement Section</h1>
+            </div>
+            <div class="teams">
+                <div class="card">
+                    <img src="static/images/E.7.jpeg" alt="">
+        
+                    <p>"A successful marriage requires falling in love many times, always with the same person."</p>
+
+                </div>
+                <div class="card">
+                    <img src="static/images/E.4.jpeg" alt="">
+            
+                    <p>"An engagement marks the end of a whirlwind romance and the beginning of an eternal love story."</p>
+
+                </div>
+                <div class="card">
+                    <img src="static/images/E.2.jpeg" alt="">
+                
+                    <p>"The best thing to hold onto in life is each other."</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="speciality">
+            <div class="head">
+                <h1>Marriage Section</h1>
+            </div>
+            <div class="speciality">
+                <div class="spCard">
+                    <img src="static/images/w.1.jpeg" alt="">
+            
+                    <p>"A great marriage is not when the 'perfect couple' comes together. It is when an imperfect couple learns to enjoy their differences."</p>
+
+                </div>
+                <div class="spCard">
+                    <img src="static/images/w.3.jpeg" alt="">
+                    
+                    <p>"Marriage is not just spiritual communion; it is also remembering to take out the trash."</p>
+
+                </div>
+                <div class="spCard">
+                    <img src="static/images/w.9.webp" alt="">
+                    <p>"True love stands by each other's side on good days and stands even closer on bad days."</p>
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <div id="patient">
+            <div class="head">
+                <h1>Birthdays Section</h1>
+                <p>"You are never too old to set another goal or to dream a new dream."</p>
+                
+            </div>
+            <div class="reviews">
+                <div class="patientReview">
+                    <img src="static/images/B.1.jpeg" alt="">
+                    <img src="static/images/B.2.jpeg" alt="">
+
+                </div>
+                <div class="patientReview">
+                    <img src="static/images/B.3.jpeg" alt="">
+                    <img src="static/images/B.5.jpeg" alt="">
+
+                </div>
+                  <div class="patientReview">
+                    <img src="static/images/B.6.jpeg" alt="">
+                    <img src="static/images/B.4.jpeg" alt="">
+                   
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="contact">
+            <div class="head">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="contact">
+                <h1>Connect With Us</h1>
+                <div class="row">
+                    <form class="col s12" method="POST">
+                        {% csrf_token %}
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="Placeholder" id="first_name" type="text" name="name" class="validate">
+                          <label for="first_name">Name</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input  id="address" type="text" name="address" class="validate">
+                          <label for="address">Address</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input  id="pnumber" type="number" name="P_number" class="validate" maxlength="10">
+                          <label for="phone">Phone Number </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="email" type="email"  name="email" class="validate">
+                          <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <button id="connectBtn" > <a href="{% url  'view' %}"></a>Connect</button>
+                    </form>
+                  </div>   
+            </div>
+        </div>
+
+
+
+
+        <div class="footer">
+            <div class="text">
+                <h3>About Us</h3>
+                <p>24 Hours</p>
+                <p>Best Event Organiser</p>
+                <p>Better Services</p>
+                <p>Affordale Price</p>
+                <p></p>
+
+            </div>
+            <div class="text">
+                <h3>Event</h3>
+                <p>Engagement</p>
+                <p>Pre Wedding suite</p>
+                <p>Weddings</p>
+                <p>Birthdays</p>
+                <p></p>
+
+            </div>
+            <div class="text">
+                <h3>Best Teams</h3>
+                <p>Best Catters</p>
+                <p>Best Staff</p>
+                <p>Best Shef</p>
+                <p></p>
+                
+
+            </div>
+            <div class="text">
+                <h3>Address</h3>
+                <p>Near MG Road</p>
+                <p>Galaxy Care</p>
+                <p>333-09093</p>
+                <p>09-883-090</p>
+                
+
+            </div>
+        </div>
+
+        <div class="detail">
+            <button id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="content">
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>

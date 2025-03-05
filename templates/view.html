@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bookings</title>
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index2.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <h4 style="color: rgb(13, 106, 20); font-weight: 400px; text-align: center;">View All Bookings</h4>
+        <div class="main">
+            <table class="striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                {% for booking in booking_details %}
+                <tr>
+                    <td>{{ booking.name }}</td>
+                    <td>{{ booking.address }}</td>
+                    <td>{{ booking.phone_number }}</td>
+                    <td>{{ booking.email }}</td>
+                    <td>
+                        <a href="{% url 'update_booking' booking.id %}" class="waves-effect waves-light btn">Update</a>
+                        <a href="{% url 'delete_booking' booking.id %}" class="waves-effect waves-light btn">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    <div class="footer">
+        <div class="text">
+            <h4>About Us</h4>
+            <p>24 Hours</p>
+            <p>Best Event Organiser</p>
+            <p>Better Services</p>
+            <p>Affordale Price</p>
+            <p></p>
+
+        </div>
+        <div class="text">
+            <h4>Event</h4>
+            <p>Engagement</p>
+            <p>Pre Wedding suite</p>
+            <p>Weddings</p>
+            <p>Birthdays</p>
+            <p></p>
+
+        </div>
+        <div class="text">
+            <h4>Best Teams</h4>
+            <p>Best Catters</p>
+            <p>Best Staff</p>
+            <p>Best Shef</p>
+            <p></p>
+            
+
+        </div>
+        <div class="text">
+            <h4>Address</h4>
+            <p>Near MG Road</p>
+            <p>Galaxy Care</p>
+            <p>333-09093</p>
+            <p>09-883-090</p>
+            
+
+        </div>
+    </div>
+
+    <div class="detail">
+        <button id="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="content">
+        </div>
+    </div>
+</div>
+
+    
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

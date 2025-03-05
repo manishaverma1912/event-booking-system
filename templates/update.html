@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Booking</title>
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index2.css' %}">
+
+
+</head>
+<body>
+    <div class="container">
+        
+        <h4 style="color: rgb(5, 117, 22); font-style:inherit ; text-align: center; font-weight: 200;">Update Booking</h4>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="Name" value="{{ booking.name }}" placeholder="Name">
+            <input type="text" name="Address" value="{{ booking.address }}" placeholder="Address">
+            <input type="text" name="PhoneNumber" value="{{ booking.phone_number }}" placeholder="Phone Number">
+            <input type="email" name="Email" value="{{ booking.email }}" placeholder="Email">
+            <button type="submit" class="btn">Update</button>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="text">
+            <h3>About Us</h3>
+            <p>24 Hours</p>
+            <p>Best Event Organiser</p>
+            <p>Better Services</p>
+            <p>Affordale Price</p>
+            <p></p>
+
+        </div>
+        <div class="text">
+            <h3>Event</h3>
+            <p>Engagement</p>
+            <p>Pre Wedding suite</p>
+            <p>Weddings</p>
+            <p>Birthdays</p>
+            <p></p>
+
+        </div>
+        <div class="text">
+            <h3>Best Teams</h3>
+            <p>Best Catters</p>
+            <p>Best Staff</p>
+            <p>Best Shef</p>
+            <p></p>
+            
+
+        </div>
+        <div class="text">
+            <h3>Address</h3>
+            <p>Near MG Road</p>
+            <p>Galaxy Care</p>
+            <p>333-09093</p>
+            <p>09-883-090</p>
+            
+
+        </div>
+    </div>
+
+    <div class="detail">
+        <button id="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="content">
+        </div>
+    </div>
+</div>
+   
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
