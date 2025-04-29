@@ -1,7 +1,7 @@
 # event-booking-system
 
 
-link =https://manisharajput.pythonanywhere.com/
+link =     https://eventbooking.pythonanywhere.com
 
 A full-stack web application designed to streamline the process of event registration and management. The platform allows users to explore events and register securely, while providing administrators with full control over event creation, tracking, and participant management.
 
